@@ -1,0 +1,5 @@
+C:\Users\Phrosten\Documents\_Data_\Projekte\ImageToASCIIConverter\ImageToASCIIConverter\bin\Release\ImageToASCIIConverter.exe.config
+C:\Users\Phrosten\Documents\_Data_\Projekte\ImageToASCIIConverter\ImageToASCIIConverter\bin\Release\ImageToASCIIConverter.exe
+C:\Users\Phrosten\Documents\_Data_\Projekte\ImageToASCIIConverter\ImageToASCIIConverter\bin\Release\ImageToASCIIConverter.pdb
+C:\Users\Phrosten\Documents\_Data_\Projekte\ImageToASCIIConverter\ImageToASCIIConverter\obj\Release\ImageToASCIIConverter.exe
+C:\Users\Phrosten\Documents\_Data_\Projekte\ImageToASCIIConverter\ImageToASCIIConverter\obj\Release\ImageToASCIIConverter.pdb
