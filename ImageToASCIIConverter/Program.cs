@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.IO;
+using System.Diagnostics;
 
 namespace ASCIIImageConverter
 {
@@ -59,9 +60,13 @@ namespace ASCIIImageConverter
                     }
 
                     // Generate
-                    ConvertToASCII(filePath, newFilePath + ".txt", widthCompressionRate, heightCompressionRate, invert);
 
-                    Console.WriteLine("\n--DONE--");
+                    Stopwatch sw = new Stopwatch();
+                    sw.Start();
+                    ConvertToASCII(filePath, newFilePath + ".txt", widthCompressionRate, heightCompressionRate, invert);
+                    sw.Stop();
+                    
+                    Console.WriteLine(String.Format("\n--DONE IN {0} MS--", sw.ElapsedMilliseconds));
                     Console.ReadKey();
 
                     Console.Clear();
