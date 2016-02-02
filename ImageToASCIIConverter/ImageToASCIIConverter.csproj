@@ -47,8 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ITAConverter.cs" />
+    <Compile Include="Input Loader\ValueLoader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Input Loader\VerificationLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
