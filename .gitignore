@@ -47,3 +47,8 @@ Temporary Items
 .apdisk
 ImageToASCIIConverter/bin/Debug/ImageToASCIIConverter.exe.config
 ImageToASCIIConverter/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+ImageToASCIIConverter/bin/Debug/ImageToASCIIConverter.exe
+ImageToASCIIConverter/bin/Debug/ImageToASCIIConverter.vshost.exe.manifest
+ImageToASCIIConverter/obj/Debug/ImageToASCIIConverter.pdb
+ImageToASCIIConverter/bin/Debug/ImageToASCIIConverter.pdb
+ImageToASCIIConverter/obj/Debug/ImageToASCIIConverter.csprojResolveAssemblyReference.cache
