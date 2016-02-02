@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ImageToASCIIConverter
 {
-    class ITAConverter
+    public class ITAConverter
     {
         //
         //  Properties
@@ -132,17 +132,18 @@ namespace ImageToASCIIConverter
         public void LoadDefaultCharSet()
         {
             chars = new char[] { '@', '%', '#', '+', '=', '-', ';', ':', ',', '\'', '.', ' ' };
-            preComputedSectors = new int[][] {          new int[] {0  , 19 },
-                                                        new int[] {20 , 49 },
-                                                        new int[] {50 , 79 },
-                                                        new int[] {80 , 99 },
-                                                        new int[] {100, 119},
-                                                        new int[] {120, 139},
-                                                        new int[] {140, 159},
-                                                        new int[] {160, 179},
-                                                        new int[] {180, 199},
-                                                        new int[] {200, 239},
-                                                        new int[] {240, 255}};
+            preComputedSectors = new int[][] {  new int[] {0  , 20 },
+                                                new int[] {21 , 41 },
+                                                new int[] {42 , 62 },
+                                                new int[] {63 , 83 },
+                                                new int[] {84 , 104},
+                                                new int[] {105, 125},
+                                                new int[] {126, 146},
+                                                new int[] {147, 167},
+                                                new int[] {168, 188},
+                                                new int[] {189, 209},
+                                                new int[] {210, 230},
+                                                new int[] {231, 255}};
         }
 
         public void LoadCompressionRate(int[] rate)
@@ -164,8 +165,11 @@ namespace ImageToASCIIConverter
             preComputedSectors = GeneratePreComputedSectors(_chars_);
         }
 
-        static int[][] GeneratePreComputedSectors(char[] _chars_)
+        public static int[][] GeneratePreComputedSectors(char[] _chars_)
         {
+            if (_chars_.Length < 1)
+                throw new ArgumentException("The chars specified are too few.");
+
             int size = 255 / _chars_.Length;
             
             int[][] preComputedSectors = new int[_chars_.Length][];
@@ -174,15 +178,15 @@ namespace ImageToASCIIConverter
             int i;
             for (i = 0; i < _chars_.Length - 1; i++)
             {
-                preComputedSectors[i][0] = previous + 1;
-                preComputedSectors[i][1] = previous + size;
-                previous += size + 1;
+                preComputedSectors[i] = new int[] {previous + 1, previous + size };
+                previous += size;
             }
 
-            preComputedSectors[i][0] = previous + 1;
-            preComputedSectors[i][1] = 255;
+            preComputedSectors[i] = new int[] { previous + 1, 255};
+
+            
 
             return preComputedSectors;
         }
-    }
+}
 }

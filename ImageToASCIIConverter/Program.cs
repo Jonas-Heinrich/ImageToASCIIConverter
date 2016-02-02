@@ -15,6 +15,7 @@ namespace ImageToASCIIConverter
 
         static void Main(string[] args)
         {
+            ITAConverter.GeneratePreComputedSectors(new char[] { '@', '%', '#', '+', '=', '-', ';', ':', ',', '\'', '.', ' ' });
             Console.Title = "--Image to ASCII Converter--";
 
             // Header

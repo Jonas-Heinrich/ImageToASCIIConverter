@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ImageToASCIIConverter
 {
-    static class ValueLoader
+    public static class ValueLoader
     {
         //
         //  Path loading
@@ -57,7 +57,7 @@ namespace ImageToASCIIConverter
         //  Verification
         //
 
-        private static bool IsInteger(string input)
+        public static bool IsInteger(string input)
         {
             try
             {

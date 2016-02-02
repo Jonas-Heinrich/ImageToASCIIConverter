@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ImageToASCIIConverter
 {
-    static class VerificationLoader
+    public static class VerificationLoader
     {
 
         public static bool VerifyDefaultSettings()

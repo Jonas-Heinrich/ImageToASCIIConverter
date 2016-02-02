@@ -1,0 +1,8 @@
+C:\Users\Phrosten\Documents\_Data_\Projekte\ImageToASCIIConverter\UnitTest_ITAConverter\bin\Release\UnitTest_ITAConverter.dll
+C:\Users\Phrosten\Documents\_Data_\Projekte\ImageToASCIIConverter\UnitTest_ITAConverter\bin\Release\UnitTest_ITAConverter.pdb
+C:\Users\Phrosten\Documents\_Data_\Projekte\ImageToASCIIConverter\UnitTest_ITAConverter\bin\Release\ImageToASCIIConverter.exe
+C:\Users\Phrosten\Documents\_Data_\Projekte\ImageToASCIIConverter\UnitTest_ITAConverter\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Phrosten\Documents\_Data_\Projekte\ImageToASCIIConverter\UnitTest_ITAConverter\bin\Release\ImageToASCIIConverter.pdb
+C:\Users\Phrosten\Documents\_Data_\Projekte\ImageToASCIIConverter\UnitTest_ITAConverter\obj\Release\UnitTest_ITAConverter.csprojResolveAssemblyReference.cache
+C:\Users\Phrosten\Documents\_Data_\Projekte\ImageToASCIIConverter\UnitTest_ITAConverter\obj\Release\UnitTest_ITAConverter.dll
+C:\Users\Phrosten\Documents\_Data_\Projekte\ImageToASCIIConverter\UnitTest_ITAConverter\obj\Release\UnitTest_ITAConverter.pdb
