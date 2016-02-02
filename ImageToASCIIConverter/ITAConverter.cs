@@ -74,34 +74,51 @@ namespace ImageToASCIIConverter
             if(workingState)
                 Console.Write("WORKING");
 
-            Bitmap b = LoadImage();
+            Bitmap b;
 
-            using (StreamWriter sw = new StreamWriter(outputPath))
+            try
             {
-                for (int pixelY = 0; pixelY < b.Height; pixelY++)
+                b = LoadImage();
+            }
+            catch(ArgumentException)
+            {
+                Console.Write("\nERROR: No such file or directory!");
+                return;
+            }
+
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(outputPath))
                 {
-                    string lineResult = "";
-                    for (int pixelX = 0; pixelX < b.Width; pixelX++)
+                    for (int pixelY = 0; pixelY < b.Height; pixelY++)
                     {
-                        Color pixelColor = b.GetPixel(pixelX, pixelY);
-                        int grey = (int)(pixelColor.R * 0.3 + pixelColor.G * 0.59 + pixelColor.B * 0.11);
-
-                        if (invert)
-                            grey = 255 - grey;
-
-                        for (int i = 0; i < preComputedSectors.GetLength(0); i++)
+                        string lineResult = "";
+                        for (int pixelX = 0; pixelX < b.Width; pixelX++)
                         {
-                            if (grey >= preComputedSectors[i][0] && grey <= preComputedSectors[i][1])
+                            Color pixelColor = b.GetPixel(pixelX, pixelY);
+                            int grey = (int)(pixelColor.R * 0.3 + pixelColor.G * 0.59 + pixelColor.B * 0.11);
+
+                            if (invert)
+                                grey = 255 - grey;
+
+                            for (int i = 0; i < preComputedSectors.GetLength(0); i++)
                             {
-                                lineResult += chars[i];
-                                break;
+                                if (grey >= preComputedSectors[i][0] && grey <= preComputedSectors[i][1])
+                                {
+                                    lineResult += chars[i];
+                                    break;
+                                }
                             }
                         }
+                        sw.Write(lineResult + "\n");
+                        if (workingState && pixelY % 100 == 0)
+                            Console.Write(".");
                     }
-                    sw.Write(lineResult + "\n");
-                    if (workingState && pixelY % 100 == 0)
-                        Console.Write(".");
                 }
+            }
+            catch(ArgumentException)
+            {
+                Console.Write("\nERROR: Invalid path!");
             }
         }
 
@@ -122,7 +139,7 @@ namespace ImageToASCIIConverter
             {
                 throw new ArgumentException("The compression rate is to small!");
             }
-            return b;
+            return b;            
         }
 
         //
