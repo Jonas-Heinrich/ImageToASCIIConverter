@@ -17,7 +17,7 @@ namespace ImageToASCIIConverter
 
         public static bool VerifyInvertGreyScale()
         {
-            Console.Write("Do you want to invert the grayscale? (y/n): ");
+            Console.Write("Do you want to invert the greyscale? (y/n): ");
             return GetYesNo();
         }
 
